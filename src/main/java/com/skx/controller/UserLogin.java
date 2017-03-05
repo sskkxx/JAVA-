@@ -20,6 +20,9 @@ public class UserLogin {
 		if(
 		user.userLogin(userName, passwd)){
 			modelAndView.setViewName("index");
+		}else {
+			
+			modelAndView.setViewName("userLogin");
 		}
 		return modelAndView;
 	}

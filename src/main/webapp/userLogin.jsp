@@ -44,8 +44,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
       
    %>  
-  <form action = "/sukaixuan1/userLogin" method="post">  
-    用户名：<input type="text" name="username"><br>  
+  <form action = "/test01/userLogin" method="post">  
+    用户名：<input type="text" name="userName"><br>  
     密  码：<input type="password" name ="passwd"><br>  
       
           <input type="submit" value="提交">  
