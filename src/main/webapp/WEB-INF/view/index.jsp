@@ -13,23 +13,7 @@
 <script src="/blog04/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 
-$(document).ready(function(){ 
-	obj = {
-			url:"http://localhost:8080/blog04/lookAllBlog",
-			async:false,
-			success:function(data){
-				
-				var html = "";
-				$.each(data, function(idx, obj) {
-					
-					html +="<li>"+obj.wenzhangbiaoti+"<br><font color='red'>"+obj.wenzhangneirong+"</font><br>"+obj.date+"</li>";
-					
-				});
-				$(".blog_list ul").html(html)
-			}
-	}
-	$.ajax(obj);
-});
+
 </script>
 <style type="text/css">
 
@@ -74,6 +58,7 @@ $(document).ready(function(){
 	}
 	.right_info{
 		float:right;
+		position: relative; bottom: 500px;
 		
 	}
 	.right_info div{
@@ -89,11 +74,7 @@ $(document).ready(function(){
 		position:relative;
 		width:90%;
 		padding:30px;
-	}
-	.blog_list ul li{
-		border-bottom:1px solid red;
-	}
-	
+	s
 	.user{
 		position:relative;bottom:0px;
 		padding-top: 0px;padding-left: 200px;
@@ -122,7 +103,7 @@ $(document).ready(function(){
 		<li><font color="blue"><a href="/blog04/">首页</a></font></li>
 		<li><font><a href="">关于博主</a></font></li>
 		<li><font><a href="">本站源码</a></font></li>
-		<li><a href="/blog04/wtiteBlog">写博客</a></li>
+		<li><a href="/test01/wtiteBlog.jsp">写博客</a></li>
 	</ul>
 	</nav>
 	<div class="user">
@@ -133,28 +114,31 @@ $(document).ready(function(){
 			密码<input type="text" name="password"/>
 		</form>
 	</div>
-	<br>
-		<div class="userlogin">
-		<form action="/blog04/userLogin" method="POST" >
-		
-			登陆<input type="submit" />
-						账号<input type="text" name="userName"/>
-			密码<input type="text" name="password"/>
-		</form>
+	
 	</div>
 </div>
 <div class="body">
 <div class="blog_list">
 	<div>最新博客</div>
+	<br><br><br>
+	<div style="width: 60%">
+		<li style="margin-bottom: 30px">
+				  	<span class="date"><a href="/test01/articles/01.jsp">2017年03月14日</a></span><br>
+				  	<span class="title"><a href="/test01/articles/01.jsp"></a></span><br>
+				  	<span class="summary">摘要: 一个在校生，购买了我的普通VIP课程，学习完，春招找了份好工作。这几百块还是花得值的。为了防止被水军喷，上图。...</span>
+				  	<br><span class="img">
+				  		
+					  		<a href="/blog/articles/264.html"><img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1489731721&di=d39e25be3a67747d38ef77a060a1f006&src=http://i3.17173.itc.cn/2013/hy2/2013/03/07/new_skin_03.jpg" title="1489468584043068722.jpg" alt="QQ鎴浘20170314131542.jpg"></a>
+					  		&nbsp;&nbsp;
+				  		
+				  	</span>
+				  	<br><span class="info">发表于 2017-03-14 13:16 阅读(389) </span>
+	  	</li>
+				  <hr style="height:5px;border:none;border-top:1px dashed gray;padding-bottom:  10px;" />
+		
 	
-	<ul>
-		
-		<%
-			
-			
-		
-		%>
-	</ul>
+	</div>
+	
 </div>
 <div class="right_info">
 <div class="bloger_info">

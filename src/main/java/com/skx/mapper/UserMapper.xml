@@ -81,6 +81,6 @@
   </update>
   
   <select id="selectUser" parameterType="String" resultMap="BaseResultMap">
-  		select * from user where user_name=#{userName}
+  		select * from user where loginName=#{userName}
   </select>
 </mapper>

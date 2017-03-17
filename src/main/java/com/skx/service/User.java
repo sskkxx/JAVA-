@@ -14,7 +14,7 @@ public class User {
 	
 	public boolean userLogin(String userName,String passwd){
 		
-		if(passwd==userMapper.selectUser(userName).getPassword()){
+		if(passwd.equals(userMapper.selectUser(userName).getPassword())){
 			return true;
 		}else return false;
 		
